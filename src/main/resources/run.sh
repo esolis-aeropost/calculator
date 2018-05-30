@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 if [ "$(docker ps | grep @project.artifactId@)" ]; then
 	echo "Stop app container"
@@ -20,4 +20,4 @@ fi
 echo "Pull image from repository"
 docker pull edsolis/@project.artifactId@:@project.version@
 echo "Run container"
-docker run -d --name @project.artifactId@ -p 9000:9000 -p 9092:9092 edsolis/@project.artifactId@:@project.version@
+docker run -d --name @project.artifactId@ -p 8081:8081 edsolis/@project.artifactId@:@project.version@
