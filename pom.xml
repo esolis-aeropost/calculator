@@ -58,7 +58,7 @@
 			    </execution>
 			  </executions>
 			  <configuration>
-			    <repository>docker.io/edsolis/${artifactId}</repository>
+			    <repository>docker.io/edsolis/${project.artifactId}</repository>
 			    <tag>${project.version}</tag>
 			    <buildArgs>
 			      <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
